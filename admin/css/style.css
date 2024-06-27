@@ -474,12 +474,61 @@ main {
     border: solid 1px var(--lgc);
 
     border-radius: var(--p-3xs);
+
+    gap: var(--p-3xs);
+}
+
+.contents button.point{
+
 }
 
 .contents button.excel{
     color: var(--green-line);
     background-color: var(--green-bg);
     border: solid 1px var(--green-line);
+}
+
+.contents .filter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: var(--p-xs);
+}
+
+.contents .filter .row{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: var(--p-xs);
+}
+
+.contents .filter .label{
+    width: 10%;
+    min-width: 140px;
+    max-width: 160px;
+    height: 36px;
+    padding: 0 var(--p-md);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: var(--p-sm);
+
+    background-color: var(--bgc);
+    color: var(--bc);
+    border-radius: var(--p-3xs);
+}
+
+.contents .filter .calendar{
+    display: flex;
+    align-items: center;
+    gap: var(--p-2xs);
+}
+
+.contents .select{
+    height: 36px;
 }
 
 .contents .btit{
