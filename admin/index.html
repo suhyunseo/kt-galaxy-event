@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT 삼성 신단말 이벤트 - 관리자</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="home">
+        <div class="contents">
+            <div class="title">
+                <div class="name">
+                    대시보드
+                </div>
+                <div class="user-menu">
+                    <!-- 로그아웃 -->
+                    <div class="logout"><button>로그아웃</button></div>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="cont">
+                    <div class="info">
+                        <div class="left">
+                            <div class="stit">일별 응모 건 수</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <script>
+                            const ctx = document.getElementById('myChart');
+
+                            new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['24-06-01','24-06-02','24-06-03','24-06-04','24-06-05','24-06-06','24-06-07','24-06-08','24-06-09','24-06-10',],
+                                    datasets: [{
+                                        label: '응모 건 수',
+                                        data: [12, 19, 3, 5, 2, 3, 2, 3, 12, 19,],
+                                        borderWidth: 1
+                                    }
+                                    ]
+                                },
+                                options: {
+                                    plugins: {
+                                    },
+                                    responsive: true,
+                                    scales: {
+                                        x: {
+                                            stacked: true,
+                                        },
+                                        y: {
+                                            stacked: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="info">
+                        <div class="left">
+                            <div class="stit">일별 접속 현황</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="chart">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <script>
+                            const ctx2 = document.getElementById('myChart2');
+
+                            new Chart(ctx2, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['24-06-01','24-06-02','24-06-03','24-06-04','24-06-05','24-06-06','24-06-07','24-06-08','24-06-09','24-06-10',],
+                                    datasets: [{
+                                        label: '접속자 수',
+                                        data: [12, 19, 3, 5, 2, 3, 2, 3, 12, 19,],
+                                        borderWidth: 1
+                                    }
+                                    ]
+                                },
+                                options: {
+                                    plugins: {
+                                    },
+                                    responsive: true,
+                                    scales: {
+                                        x: {
+                                            stacked: true,
+                                        },
+                                        y: {
+                                            stacked: true
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
