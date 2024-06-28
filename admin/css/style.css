@@ -20,6 +20,19 @@ a {
     cursor: pointer;
 }
 
+input,
+select{
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
 button {
     font-family: inherit;
     font-size: 16px;
@@ -106,7 +119,7 @@ main {
     align-items: center;
 }
 
-.aside .logo img{
+.aside .logo img {
     max-width: 95%;
     height: auto;
 }
@@ -181,7 +194,7 @@ main {
     display: block;
 }
 
-.aside .gnb .nav-item .arr{
+.aside .gnb .nav-item .arr {
     position: absolute;
     top: 18px;
     right: 16px;
@@ -189,21 +202,21 @@ main {
     transition: all 0.2s;
 }
 
-.aside .gnb .nav-item .arr img:last-child{
+.aside .gnb .nav-item .arr img:last-child {
     display: none;
 }
 
 .aside .gnb .nav-item.active .arr img:first-child,
-.aside .gnb .nav-item:hover .arr img:first-child{
+.aside .gnb .nav-item:hover .arr img:first-child {
     display: none;
 }
 
 .aside .gnb .nav-item.active .arr img:last-child,
-.aside .gnb .nav-item:hover .arr img:last-child{
+.aside .gnb .nav-item:hover .arr img:last-child {
     display: block;
 }
 
-.aside .gnb .nav-item.active .arr{
+.aside .gnb .nav-item.active .arr {
     transform: rotate(-180deg);
 }
 
@@ -333,7 +346,7 @@ main {
     row-gap: var(--p-2xl);
 }
 
-.contents .wrap .cont{
+.contents .wrap .cont {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -403,7 +416,7 @@ main {
     text-align: center;
 }
 
-.contents .main-stat .box a{
+.contents .main-stat .box a {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -421,27 +434,27 @@ main {
     transition: all 0.2s;
 }
 
-.contents .main-stat .box a:hover{
+.contents .main-stat .box a:hover {
     background-color: var(--mc);
 }
 
-.contents .main-stat .box a img{
+.contents .main-stat .box a img {
     width: 10px;
 }
 
-.contents .main-stat .box a img:last-child{
+.contents .main-stat .box a img:last-child {
     display: none;
 }
 
-.contents .main-stat .box a:hover img:first-child{
+.contents .main-stat .box a:hover img:first-child {
     display: none;
 }
 
-.contents .main-stat .box a:hover img:last-child{
+.contents .main-stat .box a:hover img:last-child {
     display: block;
 }
 
-.contents .main-stat .box span{
+.contents .main-stat .box span {
     margin-bottom: var(--p-2xs);
 
     display: inline-block;
@@ -449,12 +462,12 @@ main {
     font-weight: var(--regular);
 }
 
-.contents .main-stat .box .num{
+.contents .main-stat .box .num {
     font-size: var(--p-xl);
     font-weight: var(--black);
 }
 
-.contents .btn-wrap{
+.contents .btn-wrap {
     width: 100%;
 
     display: flex;
@@ -463,39 +476,47 @@ main {
     gap: var(--p-xs);
 }
 
-.contents button{
+.contents input[type="text"] {
+    height: 36px;
+
+    font-size: var(--p-sm);
+}
+
+.contents button.btn {
     height: 36px;
     padding: 0 var(--p-md);
 
-    font-weight: var(--medium);
+    font-weight: var(--regular);
 
     color: var(--dgc);
     background-color: var(--wc);
-    border: solid 1px var(--lgc);
+    border: solid 1px var(--dgc);
 
     border-radius: var(--p-3xs);
 
     gap: var(--p-3xs);
 }
 
-.contents button.point{
-
+.contents button.point {
+    color: var(--wc);
+    background-color: var(--mc);
+    border: none;
 }
 
-.contents button.excel{
+.contents button.excel {
     color: var(--green-line);
     background-color: var(--green-bg);
     border: solid 1px var(--green-line);
 }
 
-.contents .filter{
+.contents .filter {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
     gap: var(--p-xs);
 }
 
-.contents .filter .row{
+.contents .filter .row {
     width: 100%;
 
     display: flex;
@@ -503,7 +524,7 @@ main {
     gap: var(--p-xs);
 }
 
-.contents .filter .label{
+.contents .filter .label {
     width: 10%;
     min-width: 140px;
     max-width: 160px;
@@ -521,17 +542,50 @@ main {
     border-radius: var(--p-3xs);
 }
 
-.contents .filter .calendar{
+.contents .calendar {
     display: flex;
     align-items: center;
     gap: var(--p-2xs);
 }
 
-.contents .select{
-    height: 36px;
+.contents .calendar>div {
 }
 
-.contents .btit{
+.contents .calendar label {
+    width: var(--p-md);
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents .calendar input[type="text"]{
+    width: 92px;
+}
+
+.contents .filter-box{
+    position: relative;
+
+    width: 140px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    gap: var(--p-2xs);
+
+    border: solid 1px var(--lgc);
+    border-radius: var(--p-3xs);
+
+    overflow: hidden;
+}
+
+.contents select {
+    width: 100%;
+    height: 36px;
+    padding: 0 var(--p-md);
+}
+
+.contents .btit {
     margin-bottom: var(--p-xl);
 
     font-size: var(--p-lg);
@@ -539,11 +593,11 @@ main {
 }
 
 .contents .table,
-.contents .table table{
+.contents .table table {
     width: 100%;
 }
 
-.contents .table .bstit{
+.contents .table .bstit {
     margin-bottom: var(--p-xs);
     font-size: var(--p-md);
     font-weight: var(--medium);
@@ -551,35 +605,33 @@ main {
     color: var(--mc);
 }
 
-.contents .table .info{
+.contents .table .info {
     margin-bottom: var(--p-md);
 }
 
-.contents .table .info .left{
+.contents .table .info .left {}
 
-}
-
-.contents .table table{
+.contents .table table {
     text-align: center;
 }
 
 .contents .table th,
-.contents .table td{
+.contents .table td {
     padding: var(--p-xs);
 }
 
-.contents .table td{
+.contents .table td {
     border-bottom: solid 1px var(--linec);
 }
 
 .contents .col .table th,
-.contents .col .table td{
+.contents .col .table td {
     padding: var(--p-2xs);
 
     font-size: var(--p-sm);
 }
 
-.contents .table th{
+.contents .table th {
     font-weight: var(--regular);
 
     background-color: var(--bgc);
