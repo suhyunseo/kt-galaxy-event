@@ -20,11 +20,11 @@ $(document).ready(function () {
 
         $('.nav-item.' + pageName).addClass('active');
     }
-    
+
     //
     $('#header').load('aside.html');
 
-    $('.logout button').click(function (){
+    $('.logout button').click(function () {
         location.href = 'login.html';
     })
     //
@@ -51,5 +51,31 @@ $(function () {
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: "년"
+    });
+});
+
+//로그인 유효성 검사
+$(document).ready(function () {
+    $('#login-form').on('submit', function (event) {
+        event.preventDefault();
+
+        var username = $('#adminId').val().trim();
+        var password = $('#password').val().trim();
+        var errorMessage = '';
+
+        if (username === '') {
+            errorMessage = '아이디를 입력해주세요.';
+        } else if (password === '') {
+            errorMessage = '비밀번호를 입력해주세요.';
+        }
+
+        if (errorMessage !== '') {
+            $('.login-error').text(errorMessage).show();
+        } else {
+            // 로그인 처리 로직 추가
+            // 예를 들어, 서버로 데이터 전송 등
+            $('.login-error').hide();
+            alert('로그인 성공!');
+        }
     });
 });
