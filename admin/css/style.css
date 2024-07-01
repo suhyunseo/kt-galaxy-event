@@ -57,6 +57,7 @@ button {
     --lgc: #DCE0EE;
     --dgc: #787D8B;
     --rc: #D66161;
+    --drc: #ff003e;
     --mc: #1C6AED;
     --sc: #1B3561;
     --bgc: #f2f5fa;
@@ -105,9 +106,9 @@ body {
 }
 
 .login-area{
-    max-width: 400px;
+    max-width: 500px;
 
-    padding: var(--p-3xl) var(--p-2xl);
+    padding: var(--p-3xl) 48px var(--p-2xl);
 
     display: flex;
     flex-wrap: wrap;
@@ -120,17 +121,18 @@ body {
 .login-area .logo{
     width: 100%;
     text-align: center;
+    margin-bottom: var(--p-xl);
 }
 
 .login-area .logo img{
-    display: block;
-    margin-bottom: var(--p-md);
+    display: inline-block;
+    margin-bottom: var(--p-2xs);
 }
 
 .login-area .logo span{
     display: block;
 
-    font-size: var(--p-lg);
+    font-size: var(--p-xl);
     font-weight: bold;
 
     color: var(--gc);
@@ -138,6 +140,7 @@ body {
 
 .login-area form{
     width: 100%;
+    margin-bottom: var(--p-md);
 
     display: flex;
     flex-wrap: wrap;
@@ -153,15 +156,93 @@ body {
 
     display: block;
 
-    font-size: var(--p-sm);
+    font-size: var(--p-md);
 }
 
-.login-area form label input[type="text"],
-.login-area form label input[type="password"]{
+.login-area input[type="text"],
+.login-area input[type="password"]{
     width: 100%;
-    height: 48px;
+    height: 64px;
     padding: var(--p-md);
+    
+    font-size: var(--p-md);
+
     border: solid 1px var(--lgc);
+    border-radius: var(--p-3xs);
+}
+
+.login-area input[type="text"]::placeholder,
+.login-area input[type="password"]::placeholder{
+    color: var(--gc);
+}
+
+.login-area .login-auto{
+    width: 100%;
+}
+
+.login-area .auto{
+    display: inline-flex;
+    align-items: center;
+    gap: var(--p-3xs);
+
+    font-size: var(--p-md);
+}
+
+.login-area input[type="checkbox"]{
+    position: relative;
+
+    display: inline-block;
+    width: var(--p-md);
+    height: var(--p-md);
+
+    text-align: center;
+    
+    border: solid 1px var(--gc);
+    border-radius: var(--p-3xs);
+}
+
+.login-area input[type="checkbox"]::after{
+    content:'✔';
+
+    font-size: var(--p-sm);
+    line-height: var(--p-sm);
+
+    color: #fff;
+}
+
+.login-area input[type="checkbox"]:checked{
+    background-color: var(--mc);
+}
+
+.login-area .login-error{
+    font-size: var(--p-sm);
+    color:  var(--drc);
+}
+
+.login-area .btn{
+    width: 100%;
+
+    margin-bottom: var(--p-md);
+}
+
+.login-area button{
+    width: 100%;
+    height: var(--p-3xl);
+    
+    color: var(--wc);
+    background-color: var(--mc);
+    border-radius: var(--p-3xs);
+}
+
+.login-area .support{
+    width: 100%;
+
+    display: block;
+
+    line-height: var(--p-2xl);
+    text-align: center;
+    
+    color: var(--gc);
 }
 
 .main {
