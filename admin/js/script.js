@@ -17,17 +17,16 @@ $(document).ready(function () {
 
     if (typeof pageName !== 'undefined') {
         console.log(pageName);
-
         $('.nav-item.' + pageName).addClass('active');
     }
 
-    //
+    //삭제가능 start
     $('#header').load('aside.html');
 
     $('.logout button').click(function () {
         location.href = 'login.html';
     })
-    //
+    //삭제가능 end
 });
 
 $(function () {
@@ -73,9 +72,12 @@ $(document).ready(function () {
             $('.login-error').text(errorMessage).show();
         } else {
             // 로그인 처리 로직 추가
-            // 예를 들어, 서버로 데이터 전송 등
             $('.login-error').hide();
             alert('로그인 성공!');
+
+            //삭제가능 start
+            location.href = 'index.html';
+            //삭제가능 end
         }
     });
 });
