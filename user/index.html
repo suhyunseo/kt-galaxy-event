@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="visual">
+            <div class="wrap">
+                <div class="pro-name">
+                    <img src="img/pro-name.png">
+                </div>
+                <div class="title">
+                    <img src="img/title.png">
+                </div>
+                <div class="phone">
+                    <img src="img/phone.png">
+                </div>
+                <div class="brand">
+                    <img src="img/brand.png">
+                </div>
+            </div>
+            <div class="bg">
+                <div class="ground">
+                    <img src="img/ground.png">
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <form id="entry-form">
+                <div class="wrap">
+                    <h3>체험 이벤트 응모하기</h3>
+                    <div class="label">
+                        <b>이름</b>
+                        <input type="text" id="name" placeholder="이름을 입력해주세요.">
+                    </div>
+                    <div class="label">
+                        <b>전화번호</b>
+                        <input type="text" id="phone" placeholder="전화번호를 입력해주세요.">
+                    </div>
+                    <div class="label">
+                        <b>주소</b>
+                        <div class="fbox">
+                            <input type="text" id="address">
+                            <button class="btn location">주소검색</button>
+                        </div>
+                        <input type="text" id="address2">
+                    </div>
+                    <div class="label">
+                        <b>방문한 KT Plaza 이름</b>
+                        <input type="text" id="spot">
+                    </div>
+                    <div class="label">
+                        <b>개인정보 활용 동의</b>
+                        <p class="textarea">
+                            개인정보 처리방침<br>
+                            회사(이하 "회사명" 또는 "서비스")는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고
+                            안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고
+                            원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립하며 공개합니다.
+                        </p>
+                        <label class="checkbox">
+                            <input type="checkbox" id="privacy">개인정보 활용에 동의합니다
+                        </label>
+                    </div>
+                    <div class="error" style="display: none;">
+
+                    </div>
+                </div>
+                <div class="btn">
+                    <button type="submit">응모하기</button>
+                </div>
+            </form>
+            <div class="copy">
+                copyright @ kt event. All right reserved.
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
