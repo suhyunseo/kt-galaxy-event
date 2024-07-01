@@ -4,6 +4,7 @@
     font-weight: 400;
     font-style: normal;
 }
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');    
 
 * {
     margin: 0;
@@ -11,9 +12,12 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-synthesis: none!important;
 }
 
-body {}
+html, body {
+    font-family: 'Pretendard', sans-serif;
+}
 
 a {
     color: inherit;
@@ -486,6 +490,9 @@ main {
     height: 36px;
     padding: 0 var(--p-md);
 
+    display: inline-flex;
+    align-items: center;
+
     font-weight: var(--regular);
 
     color: var(--dgc);
@@ -495,6 +502,15 @@ main {
     border-radius: var(--p-3xs);
 
     gap: var(--p-3xs);
+}
+
+.contents button.btn .icon{
+    width: var(--p-md);
+    height: var(--p-md);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contents button.point {
@@ -542,13 +558,32 @@ main {
     border-radius: var(--p-3xs);
 }
 
-.contents .calendar {
+.contents .filter-box{
+    position: relative;
+
+    width: 150px;
+    height: 36px;
+
     display: flex;
     align-items: center;
     gap: var(--p-2xs);
+
+    border: solid 1px var(--lgc);
+    border-radius: var(--p-3xs);
+
+    overflow: hidden;
 }
 
-.contents .calendar>div {
+.contents .calendar {
+    display: flex;
+    align-items: center;
+    gap: var(--p-xs);
+    
+    color: var(--lgc);
+}
+
+.contents .calendar .filter-box{
+    padding: 0 var(--p-md);
 }
 
 .contents .calendar label {
@@ -563,26 +598,24 @@ main {
     width: 92px;
 }
 
-.contents .filter-box{
-    position: relative;
-
-    width: 140px;
-    height: 36px;
-
-    display: flex;
-    align-items: center;
-    gap: var(--p-2xs);
-
-    border: solid 1px var(--lgc);
-    border-radius: var(--p-3xs);
-
-    overflow: hidden;
-}
-
 .contents select {
     width: 100%;
     height: 36px;
     padding: 0 var(--p-md);
+
+    font-size: var(--p-sm);
+}
+
+.contents .search {
+    width: calc(100% - 300px - 16px);
+    height: 36px;
+    padding: 0 var(--p-md);
+
+    font-size: var(--p-sm);
+
+    border: solid 1px var(--lgc);
+    border-radius: var(--p-3xs);
+    overflow: hidden;
 }
 
 .contents .btit {
