@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1
-        });
-    </script>
+    <title>Time-Based Content</title>
 </head>
 <body>
-    
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://pharmace.cafe24.com/web/upload/NNEditor/20240701/04-1.jpg" style="width: 750px;"></div>
-      <div class="swiper-slide"><img src="https://pharmace.cafe24.com/web/upload/NNEditor/20240701/04-2.jpg" style="width: 750px;"></div>
-      <div class="swiper-slide"><img src="https://pharmace.cafe24.com/web/upload/NNEditor/20240701/04-3.jpg" style="width: 750px;"></div>
-      <div class="swiper-slide"><img src="https://pharmace.cafe24.com/web/upload/NNEditor/20240701/04-4.jpg" style="width: 750px;"></div>
+    <div id="container">
+        <!-- 여기에 콘텐츠가 동적으로 추가됩니다 -->
     </div>
-  </div>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {});
-  </script>
+    <script>
+        // 현재 날짜와 시간을 가져옵니다
+        const now = new Date();
+
+        // 특정 날짜와 시간을 설정합니다 (예: 2024년 7월 4일 오후 3시 0분 0초)
+        const targetDate = new Date('2024-07-03T09:27:30');
+
+        // 현재 시간이 설정한 시간 이후인지 확인합니다
+        if (now >= targetDate) {
+            // 현재 시간이 설정한 시간 이후라면 콘텐츠를 추가합니다
+            const content = `
+                <div id="content">
+                    <h1>특정 날짜와 시간에만 보이는 콘텐츠</h1>
+                    <p>이 콘텐츠는 설정한 날짜와 시간이 되어야 볼 수 있습니다.</p>
+                </div>
+            `;
+            document.getElementById('container').innerHTML = content;
+        }
+    </script>
 </body>
 </html>
